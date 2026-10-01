@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">2048</string>
+    <string name="back_button_desc">Orqaga qaytish</string>
+    <string name="game_2048_description">2048 o‘yini sonlar bilan, aqlni charxlar har dam,
+Bir xil raqam qo‘shilganda, kattalashar qadamma-qadam.
+2 dan boshlab yo‘l olar, maqsad esa 2048,
+Har bir yurish muhim bunda, xato qilma hech bekor.
+Mantiq, sabr va hisob birlashadi bu maydonda,
+2048ga yetgan g‘olib bo‘lar oxir-oqibat sahnada.</string>
+    <string name="back_button_text">Orqaga</string>
+    <string name="new_game_text">Yangi o‘yin</string>
+    <string name="continue_text">Davom etish</string>
+    <string name="tagline_text">Sonlarni birlashtir VA G‘olib bo‘l.</string>
+    <string name="best_score_label">Eng yaxshi natija</string>
+    <string name="app_title">2048</string>
+    <string name="tile_value_2">2</string>
+    <string name="tile_value_4">4</string>
+    <string name="tile_value_8">8</string>
+    <string name="tile_value_16">16</string>
+    <string name="score_zero">0</string>
+    <string name="info_desc">Ma\'lumot</string>
+    <string name="share_desc">Ulashish</string>
+    <string name="score_label">Ball</string>
+    <string name="home_desc">Bosh sahifa</string>
+    <string name="undo_desc">Orqaga qaytarish</string>
+    <string name="restart_desc">Qayta boshlash</string>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/palette_dark_navy">
+
+    <TextView
+        android:id="@+id/text2048"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-black"
+        android:letterSpacing="0.03"
+        android:text="2048"
+        android:textColor="@color/palette_light_blue"
+        android:textSize="52sp"
+        android:textStyle="bold"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="6"
+        android:shadowRadius="8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/titleAccent"
+        android:layout_width="56dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_title"
+        app:layout_constraintEnd_toEndOf="@id/text2048"
+        app:layout_constraintStart_toStartOf="@id/text2048"
+        app:layout_constraintTop_toBottomOf="@id/text2048" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleAccent"
+        app:layout_constraintWidth_percent="0.86">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_description_card"
+            android:padding="20dp"
+            android:lineSpacingExtra="6dp"
+            android:textAlignment="center"
+            android:textColor="@color/palette_light_blue"
+            android:textSize="16sp"
+            android:text="@string/game_2048_description" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/info"
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/back_button_text"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="@color/palette_dark_navy"
+        android:backgroundTint="@color/palette_medium_blue"
+        app:icon="@drawable/back"
+        app:iconTint="@color/palette_dark_navy"
+        app:iconGravity="textStart"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_main"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/gameTitleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:letterSpacing="0.03"
+        android:text="@string/app_title"
+        android:textColor="@color/palette_light_blue"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/ScoreContainer"
+        app:layout_constraintStart_toStartOf="@id/container"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_icon_button"
+        android:contentDescription="@string/home_desc"
+        android:padding="6dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="@id/gameTitleSmall"
+        app:layout_constraintEnd_toStartOf="@id/back_step"
+        app:layout_constraintTop_toTopOf="@id/gameTitleSmall"
+        app:tint="@color/palette_light_blue" />
+
+    <ImageView
+        android:id="@+id/back_step"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_icon_button"
+        android:contentDescription="@string/undo_desc"
+        android:padding="6dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@id/gameTitleSmall"
+        app:layout_constraintEnd_toStartOf="@id/restart"
+        app:layout_constraintTop_toTopOf="@id/gameTitleSmall"
+        app:tint="@color/palette_light_blue" />
+
+    <ImageView
+        android:id="@+id/restart"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_icon_button"
+        android:contentDescription="@string/restart_desc"
+        android:padding="6dp"
+        android:src="@drawable/restart"
+        app:layout_constraintBottom_toBottomOf="@id/gameTitleSmall"
+        app:layout_constraintEnd_toEndOf="@id/container"
+        app:layout_constraintTop_toTopOf="@id/gameTitleSmall"
+        app:tint="@color/palette_light_blue" />
+
+    <LinearLayout
+        android:id="@+id/ScoreContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_score_badge"
+        android:orientation="vertical"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="6dp"
+        app:layout_constraintEnd_toStartOf="@id/highScoreContainer"
+        app:layout_constraintTop_toBottomOf="@id/gameTitleSmall">
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.08"
+            android:text="@string/score_label"
+            android:textAllCaps="true"
+            android:textColor="@color/palette_slate_blue"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/scoreCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/score_zero"
+            android:textColor="@color/palette_light_blue"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/highScoreContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_score_badge"
+        android:orientation="vertical"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="6dp"
+        app:layout_constraintBottom_toBottomOf="@id/ScoreContainer"
+        app:layout_constraintEnd_toEndOf="@id/container"
+        app:layout_constraintTop_toTopOf="@id/ScoreContainer">
+
+        <TextView
+            android:id="@+id/highScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.08"
+            android:text="@string/best_score_label"
+            android:textAllCaps="true"
+            android:textColor="@color/palette_slate_blue"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/highScoreCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/score_zero"
+            android:textColor="@color/palette_light_blue"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_grid_frame"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_0"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

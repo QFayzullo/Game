@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="PreviewTileBase">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="layout_columnWeight">1</item>
+        <item name="layout_rowWeight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="PreviewTileEmpty" parent="PreviewTileBase">
+        <item name="android:background">@drawable/bg_tile_empty</item>
+    </style>
+
+    <style name="PreviewTile2" parent="PreviewTileBase">
+        <item name="android:background">@drawable/bg_tile_light</item>
+        <item name="android:textColor">@color/palette_dark_navy</item>
+    </style>
+
+    <style name="PreviewTile4" parent="PreviewTileBase">
+        <item name="android:background">@drawable/bg_tile_light</item>
+        <item name="android:textColor">@color/palette_dark_navy</item>
+    </style>
+
+    <style name="PreviewTile8" parent="PreviewTileBase">
+        <item name="android:background">@drawable/bg_tile_medium</item>
+        <item name="android:textColor">@color/palette_dark_navy</item>
+    </style>
+
+    <style name="PreviewTile16" parent="PreviewTileBase">
+        <item name="android:background">@drawable/bg_tile_medium</item>
+        <item name="android:textColor">@color/palette_dark_navy</item>
+    </style>
+
+</resources>
